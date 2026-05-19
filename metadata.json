@@ -1,0 +1,6 @@
+{
+  "name": "LumiBrace | הזיכרון שלך, תמיד איתך",
+  "description": "מותג תכשיטי יוקרה בעיצוב אישי - צמידי הקרנה עם התמונה המרגשת שלכם. מתנה מושלמת לכל אירוע.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
