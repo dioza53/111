@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ page_title }}</title>
+    
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {{ content_for_header }}
+
+    <!-- Tailwind CSS with custom configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              charcoal: '#050505',
+              pearl: '#F5F5F7',
+              gold: '#D4AF37',
+              muted: '#1A1A1A',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+      .gradient-bg {
+        background: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 100%);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(245, 245, 247, 0.1);
+      }
+      [dir="rtl"] .rtl-flip {
+        transform: scaleX(-1);
+      }
+    </style>
+  </head>
+
+  <body class="gradient-bg min-h-screen text-pearl selection:bg-gold/30 selection:text-pearl" dir="rtl">
+    <div style="background: red; color: white; padding: 20px; text-align: center; font-size: 24px; z-index: 9999; position: relative;">
+      THEME IS LOADING - DEBUG MESSAGE
+    </div>
+    {% section 'header' %}
+
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+    
+    {% render 'cart-drawer' %}
+
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

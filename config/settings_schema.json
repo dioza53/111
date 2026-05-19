@@ -6,5 +6,9 @@
     "theme_author": "LumiBrace Design",
     "theme_documentation_url": "https://help.shopify.com",
     "theme_support_url": "https://support.shopify.com"
+  },
+  {
+    "name": "General",
+    "settings": []
   }
 ]

@@ -1,0 +1,23 @@
+<section class="py-24 bg-charcoal">
+  <div class="container mx-auto px-6">
+    <h1 class="text-4xl font-bold mb-8">{{ collection.title }}</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {% for product in collection.products %}
+        <div class="glass-card p-4 rounded-xl">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | image_url: width: 400 }}" class="w-full h-auto rounded-lg mb-4" />
+            <h2 class="text-xl font-bold">{{ product.title }}</h2>
+            <p class="text-gold">{{ product.price | money }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection",
+  "settings": []
+}
+{% endschema %}
