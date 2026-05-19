@@ -1,6 +1,66 @@
 {
-  "current": {},
+  "current": {
+    "sections": {
+      "hero": {
+        "type": "hero",
+        "settings": {}
+      },
+      "featured-product": {
+        "type": "featured-product",
+        "settings": {}
+      },
+      "how-it-works": {
+        "type": "how-it-works",
+        "settings": {}
+      },
+      "our-story": {
+        "type": "our-story",
+        "settings": {}
+      },
+      "faq": {
+        "type": "faq",
+        "settings": {}
+      }
+    },
+    "content_for_index": [
+      "hero",
+      "featured-product",
+      "how-it-works",
+      "our-story",
+      "faq"
+    ]
+  },
   "presets": {
-    "Default": {}
+    "Default": {
+      "sections": {
+        "hero": {
+          "type": "hero",
+          "settings": {}
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {}
+        },
+        "how-it-works": {
+          "type": "how-it-works",
+          "settings": {}
+        },
+        "our-story": {
+          "type": "our-story",
+          "settings": {}
+        },
+        "faq": {
+          "type": "faq",
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-product",
+        "how-it-works",
+        "our-story",
+        "faq"
+      ]
+    }
   }
 }
